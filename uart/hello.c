@@ -1,16 +1,17 @@
 /* See LICENSE file for copyright and license details. */
 
+#include <fe310/prci.h>
 #include <fe310/uart.h>
 
-void
+static void
 uart_init(volatile Uart *uart)
 {
-	uart_baudrate(uart, 115200);
+	uart_baudrate(uart, prci_measure_hfclk(3000), 115200);
 	uart_txctrl(uart, true, UART_STOP_BITS_ONE, WM_0);
 	uart_iof(uart, true, UART_IOF_TX);
 }
 
-void
+static void
 uart_deinit(volatile Uart *uart)
 {
 	/* `tis but a hack: there is no tx fifo empty flag in the fe310 */
@@ -38,3 +39,4 @@ main(void)
 
 	return 0;
 }
+
