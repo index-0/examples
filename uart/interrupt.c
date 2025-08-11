@@ -47,7 +47,7 @@ main(void)
 	plic_threshold(PLIC_PRIORITY_0);
 	plic_hook(PLIC_IRQ_UART1, uart1_irq);
 	plic_priority(PLIC_IRQ_UART1, PLIC_PRIORITY_1);
-	plic_ie(true, BITMASK(PLIC_IRQ_UART1));
+	plic_ie(true, PLIC_IRQ_BIT(PLIC_IRQ_UART1));
 
 	while (1)
 		/* a..z */
