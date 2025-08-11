@@ -49,7 +49,7 @@ main(void)
 
 	plic_hook(PLIC_IRQ_GPIO13, gpio13_isr);
 	plic_priority(PLIC_IRQ_GPIO13, PLIC_PRIORITY_1);
-	plic_ie(true, BITMASK(PLIC_IRQ_GPIO13));
+	plic_ie(true, PLIC_IRQ_BIT(PLIC_IRQ_GPIO13));
 
 	/* wait for interrupt */
 	while (1) __asm__ volatile("wfi");
