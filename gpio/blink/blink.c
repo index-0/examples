@@ -19,9 +19,9 @@ main(void)
 	gpio_cfg(GPIO_OUTPUT, PINS);
 
 	while (1) {
-		wait(1);
+		wait();
 		gpio_set(PINS);
-		wait(1);
+		wait();
 		gpio_clr(PINS);
 	}
 
