@@ -3,7 +3,9 @@
 #include <fe310/clint.h>
 #include <fe310/gpio.h>
 
-#define PINS GPIO_PIN(19) | GPIO_PIN(21) | GPIO_PIN(22)
+#include "hifive1.h"
+
+#define LEDS LED_R | LED_G | LED_B
 #define RTCFQ 32768
 
 static void
@@ -16,13 +18,13 @@ wait(void)
 int
 main(void)
 {
-	gpio_cfg(GPIO_OUTPUT, PINS);
+	gpio_cfg(GPIO_OUTPUT, LEDS);
 
 	while (1) {
 		wait();
-		gpio_set(PINS);
+		gpio_set(LEDS);
 		wait();
-		gpio_clr(PINS);
+		gpio_clr(LEDS);
 	}
 
 	return 0;
