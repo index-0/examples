@@ -1,15 +1,8 @@
 /* See LICENSE file for copyright and license details. */
 
-#include <fe310/clint.h>
 #include <fe310/prci.h>
 #include <fe310/pwm.h>
-
-static inline void
-wait(u32 ticks)
-{
-	u32 next = clint_get_mtime() + ticks + 1;
-	while (clint_get_mtime() < next);
-}
+#include <fe310/riscv.h>
 
 int
 main(void)
@@ -31,7 +24,7 @@ main(void)
 			pwm_cmp(pwm1, PWMCMP1, cmpx); /* LED_G */
 			pwm_cmp(pwm1, PWMCMP2, cmpx); /* LED_B */
 			pwm_cmp(pwm1, PWMCMP3, cmpx); /* LED_R */
-			wait(1024);
+			delay_ms(10);
 		}
 	}
 

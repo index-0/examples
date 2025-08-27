@@ -1,19 +1,11 @@
 /* See LICENSE file for copyright and license details. */
 
-#include <fe310/clint.h>
 #include <fe310/gpio.h>
+#include <fe310/riscv.h>
 
 #include "hifive1.h"
 
 #define LEDS LED_R | LED_G | LED_B
-#define RTCFQ 32768
-
-static void
-wait(void)
-{
-	u64 next = clint_get_mtime() + RTCFQ / 2 + 1;
-	while (clint_get_mtime() < next);
-}
 
 int
 main(void)
@@ -21,9 +13,9 @@ main(void)
 	gpio_cfg(GPIO_OUTPUT, LEDS);
 
 	while (1) {
-		wait();
+		delay_ms(500);
 		gpio_set(LEDS);
-		wait();
+		delay_ms(500);
 		gpio_clr(LEDS);
 	}
 
