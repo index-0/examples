@@ -14,7 +14,7 @@ main(void)
 	cmp0 = pwm_prep_cmp0(pwm1, hfclk, freq, &scale);
 	pwm_cmp(pwm1, PWMCMP0, cmp0);
 
-	pwm_cfg(pwm1, true, scale, false, true, false, false, 0, 0);
+	pwm_cfg(pwm1, scale, false, PWM_CFG_TRIGGER_CONSTANT, 0, 0);
 	pwm_iof(pwm1, true, false, true, true, true);
 
 	while (1) {
