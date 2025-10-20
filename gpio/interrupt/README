@@ -1,0 +1,26 @@
+gpio interrupt
+==============
+Demonstrates using GPIO interrupts to detect and report rising and falling
+edge events on a pin.
+
+Requires
+--------
+Nothing.
+
+Setup
+-----
+A jumper wire is needed to connect board pin 3 (GPIO 19) to a GND pin.
+
+Usage
+-----
+1. View UART0 output at 115200 baud via the USB CDC ACM port.
+2. Momentarily connect and disconnect board pin 3 to a GND pin using the
+   jumper wire.
+
+Output
+------
+- Connecting pin 3 to GND (falling edge) turns the green LED ON and prints
+  "gpio13: fall" to the terminal.
+
+- Disconnecting pin 3 from GND (rising edge) turns the green LED OFF and
+  prints "gpio13: rise" to the terminal.

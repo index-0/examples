@@ -1,0 +1,20 @@
+pwm led
+=======
+Demonstrates using PWM to create a linear fade effect on the on-board RGB LED.
+
+Requires
+--------
+A board where PWM1 controls the on-board RGB LED.
+
+Setup
+-----
+None.
+
+Usage
+-----
+Observe the on-board RGB LED.
+
+Output
+------
+The on-board RGB LED will glow white and repeatedly fade from dim to bright
+over the course of one second.

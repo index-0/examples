@@ -1,0 +1,19 @@
+uart echo
+=========
+A UART loopback test where UART1 echoes to itself, verified via UART0.
+
+Requires
+--------
+A board with two UARTs (e.g., HiFive1 Rev B).
+
+Setup
+-----
+Connect the UART1 TX pin to the UART1 RX pin.
+
+Usage
+-----
+View UART0 output at 115200 baud via the USB CDC ACM port.
+
+Output
+------
+0|0 1|1 2|2 3|3 4|4 5|5 6|6 7|7 8|8 9|9

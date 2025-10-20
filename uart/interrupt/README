@@ -1,0 +1,20 @@
+uart interrupt
+==============
+Demonstrates using a UART receive watermark interrupt for batch data transfer.
+
+Requires
+--------
+A board with two UARTs (e.g., HiFive1 Rev B).
+
+Setup
+-----
+Connect the UART1 TX pin to the UART1 RX pin.
+
+Usage
+-----
+View UART0 output at 115200 baud via the USB CDC ACM port.
+
+Output
+------
+The lowercase alphabet ('a' through 'z') is printed repeatedly.
+abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz...

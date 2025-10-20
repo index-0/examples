@@ -1,0 +1,19 @@
+spi xfer
+========
+A conceptual example demonstrating the various SPI transfer API functions.
+
+Requires
+--------
+Nothing.
+
+Setup
+-----
+None.
+
+Usage
+-----
+This example is for API reference and produces no visual or terminal output.
+
+Output
+------
+None.

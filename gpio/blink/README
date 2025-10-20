@@ -1,0 +1,19 @@
+gpio blink
+==========
+A basic "hello world" for GPIO that blinks the on-board RGB LED.
+
+Requires
+--------
+Nothing.
+
+Setup
+-----
+None.
+
+Usage
+-----
+Observe the on-board RGB LED.
+
+Output
+------
+The on-board RGB LED will blink white once per second.

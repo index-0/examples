@@ -1,0 +1,23 @@
+uart hello
+==========
+A "hello world" example that repeatedly prints a string to UART0.
+
+Requires
+--------
+Nothing.
+
+Setup
+-----
+None.
+
+Usage
+-----
+View UART0 output at 115200 baud via the USB CDC ACM port.
+
+Output
+------
+The string "hello uart" is printed 1023 times, each on a new line:
+hello uart
+hello uart
+hello uart
+...
