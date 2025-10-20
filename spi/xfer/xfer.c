@@ -1,7 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
-#include <fe310/prci.h>
-#include <fe310/spi.h>
+#include <fe310/periph/prci.h>
+#include <fe310/periph/spi.h>
 
 static void
 spi_init(volatile Spi *spi, u32 baudrate)

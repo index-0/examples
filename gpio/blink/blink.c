@@ -1,7 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
-#include <fe310/gpio.h>
-#include <fe310/riscv.h>
+#include <fe310/delay.h>
+#include <fe310/periph/gpio.h>
 
 #include "hifive1.h"
 

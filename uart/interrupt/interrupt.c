@@ -1,8 +1,8 @@
 /* See LICENSE file for copyright and license details. */
 
-#include <fe310/plic.h>
-#include <fe310/prci.h>
-#include <fe310/uart.h>
+#include <fe310/core/plic.h>
+#include <fe310/periph/prci.h>
+#include <fe310/periph/uart.h>
 
 static void
 uart1_irq(void)

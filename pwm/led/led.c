@@ -1,8 +1,8 @@
 /* See LICENSE file for copyright and license details. */
 
-#include <fe310/prci.h>
-#include <fe310/pwm.h>
-#include <fe310/riscv.h>
+#include <fe310/delay.h>
+#include <fe310/periph/prci.h>
+#include <fe310/periph/pwm.h>
 
 int
 main(void)
