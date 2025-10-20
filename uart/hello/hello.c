@@ -31,7 +31,7 @@ main(void)
 
 	uart_init(uart0);
 
-	for (i = 0; i < 1023; i++)
+	for (i = 0; i < 1024; i++)
 		for (j = 0; j < sizeof(str) - 1; j++)
 			uart_putc(uart0, str[j]);
 
@@ -39,4 +39,3 @@ main(void)
 
 	return 0;
 }
-
